@@ -19,6 +19,7 @@ import java.util.Objects;
 
 public final class Caribien extends JavaPlugin implements Listener {
 
+    public ProtectionListener protectionListener = new ProtectionListener();
     public Scoreboard mainScoreboard;
     Jedis jedis;
 
@@ -39,6 +40,7 @@ public final class Caribien extends JavaPlugin implements Listener {
         PluginManager pm = getServer().getPluginManager();
 
         pm.registerEvents(this, this);
+        pm.registerEvents(protectionListener, this);
     }
 
     private void createScoreboards() {
