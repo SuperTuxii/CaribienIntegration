@@ -6,12 +6,12 @@
 
     <groupId>Database</groupId>
     <artifactId>Caribien</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Caribien</name>
+    <name>CaribienIntegration</name>
 
-    <description>Database Integration for Caribien Plugins</description>
+    <description>Caribien Integration for Caribien Servers</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
