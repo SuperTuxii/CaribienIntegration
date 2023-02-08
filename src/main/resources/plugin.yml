@@ -1,0 +1,6 @@
+name: Caribien
+version: '${project.version}'
+main: database.caribien.Caribien
+api-version: 1.16
+authors: [ SuperTuxi ]
+description: Database Integration for Caribien Plugins
