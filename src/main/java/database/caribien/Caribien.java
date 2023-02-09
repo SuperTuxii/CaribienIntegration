@@ -130,7 +130,6 @@ public final class Caribien extends JavaPlugin implements Listener {
             p.setScoreboard(scoreboard);
             Spielzeit_Counter(p);
         }
-        p.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000, 0, false, false, false));
     }
 
     @EventHandler
