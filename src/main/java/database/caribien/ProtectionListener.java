@@ -54,7 +54,7 @@ public class ProtectionListener implements Listener {
 
     @EventHandler
     public void onDamage(EntityDamageEvent event) {
-        if (!(event.getEntity() instanceof Player)) {
+        if (!(event.getEntity() instanceof Player) && !event.getCause().equals(EntityDamageEvent.DamageCause.VOID)) {
             event.setCancelled(true);
         }else if (!event.getCause().equals(EntityDamageEvent.DamageCause.VOID) && event.getEntity().getWorld().equals(Bukkit.getWorlds().get(0))) {
             event.setCancelled(true);

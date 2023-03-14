@@ -9,8 +9,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.*;
 import redis.clients.jedis.Jedis;
@@ -155,7 +153,7 @@ public final class Caribien extends JavaPlugin implements Listener {
                 Objects.requireNonNull(mainScoreboard.getObjective("Spielzeit'")).getScore(p.getName()).setScore(Objects.requireNonNull(mainScoreboard.getObjective("Spielzeit'")).getScore(p.getName()).getScore() + 1);
                 jedis.set(p.getUniqueId() + "spielzeit", String.valueOf(Objects.requireNonNull(mainScoreboard.getObjective("Spielzeit'")).getScore(p.getName()).getScore()));
                 if (Objects.requireNonNull(mainScoreboard.getObjective("Coins")).getScore(p.getName()).getScore() != Integer.parseInt(jedis.get(p.getUniqueId() + "coins"))) {
-                    jedis.set(p.getUniqueId() + "coins", String.valueOf(Objects.requireNonNull(mainScoreboard.getObjective("Spielzeit'")).getScore(p.getName()).getScore()));
+                    jedis.set(p.getUniqueId() + "coins", String.valueOf(Objects.requireNonNull(mainScoreboard.getObjective("Coins")).getScore(p.getName()).getScore()));
                 }
 
                 if (!p.getScoreboardTags().contains("Jump'n Run")) {
